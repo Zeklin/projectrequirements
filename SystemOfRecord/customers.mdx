@@ -5,17 +5,34 @@ description: ''
 ---
 
 ## Overview
-Customers refer to organizations, enterprises, or individuals who utilize the services offered by Datum Business Cloud. 
-These customers users who benefit from the functionalities provided by the platform, particularly in managing and enriching user, organization, and root organization data within their own systems or applications.
+
+Customers refer to organizations, enterprises, or individuals who utilize the services offered by Datum Business Cloud. These customers users who benefit from the functionalities provided by the platform, particularly in managing and enriching user, organization, and root organization data within their own systems or applications. Their information is organized into profiles to centralize information and provide insights to Datum clients.
+
 ## Objective
+
+The customer management platform holds all relevant information for our client's customers. This should enable quicker dealflow and insights into the client's customer base.
 
 ## Context
 
 ## Assumptions
 
+Customer profiles should be subdivided into Users, Accounts, and Parent Accounts. Users are the baseline of people who have interacted with our clients, nonpaying customers. Accounts encapsulate any user that also has an invoice or purchase history. Parent Accounts are the umbrella for multiple accounts under one entity. These profiles build upon each other, with expanding and more comprehensive features as the depth of the relationship is furthered.
+
+Users+
+- Name - Business/Organization name, point of contact at organization, point of contact from client (text)
+- Contact information - Email, phone number, address (text)
+- Notes - Textbox for additional personalized information (text)
+- Profile Depth Indicator - Beyond the required fields, the depth of information that is available for this customer
+
+Accounts+
+- Agreements - Container for any agreements between client and organization (file)
+
+Parent Accounts
+- Linked child accounts - The accounts that are encapsulated under this parent account
+
+
 ## Requirements
-### User Management
-Simplify user management processes for organizations
+
 ## Design
 
 ## Metrics

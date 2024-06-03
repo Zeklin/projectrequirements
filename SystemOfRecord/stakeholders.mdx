@@ -5,17 +5,55 @@ description: ''
 ---
 
 ## Overview
-A stakeholder is any individual, group, or party that has an interest in an organization and the outcomes of its actions.
+
+A stakeholder is any individual, group, or party that has an interest in an organization and the outcomes of its actions. Effective stakeholder management helps businesses stay updated on their external relationships. These systems include stakeholder profiles and any agreements made between a business and their stakeholders.
+
 ## Objective
+
+Stakeholder management functionality is focused on maintaining updated information on external actors that have an interest in a business. This is accomplished through a profile system. 
 
 ## Context
 
+
+
 ## Assumptions
+
+Stakeholder profiles should be accepting of robust information, with tagging providing additional customization upon basic requirements. 
+These basic requirements are listed below:
+
+- Name - Business/Organization name, point of contact at organization, point of contact from client (text)
+- Contact information - Email, phone number, address (text)
+- Notes - Textbox for additional personalized information (text)
+- Agreements - Container for any agreements between client and organization (file)
+
+Optional information:
+
+- Category - Stakeholder relationship relative to client organization (tagged)
+- Influence - How involved is the stakeholder in the client's organization (3 to 5 point system)
+- Tags - Container for custom client tags (tagged)
 
 ## Requirements
 
+### Mutability
+
+Stakeholder profiles should be easily accessible, as data is subject to moderately frequent change. This ability should be gated behind permissions, and all changes should be reflected in the audit log for each profile object.
+
+### Searchable and Filterable
+
+Both simple and advanced queries should be available to clients.
+
+### Exportable
+
+Stakeholder profiles are a useful tool for team members and prospective investors. The ability to export these profiles will be beneficial for clients.
+
 ## Design
+
+A similarly structured flow to the customers portal would be beneficial for client comfort. However, it is imparative that there is some high level design distinction between the two portals. Thus they look visually unique, but have mirrored functionality. This prioritizes both ease of use and our design resources, while providing a positive client experience. 
 
 ## Metrics
 
+Basic tracking of stakeholders, perhaps by category, may provide valuable insight for clients.
+
 ## Scope
+
+Vendors, contractors
