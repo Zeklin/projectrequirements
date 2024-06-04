@@ -1,34 +1,41 @@
-
 ---
-title: 'Billing'
-sidebarTitle: 'Billing'
+title: 'Billing Overview'
+sidebarTitle: 'Billing Overview'
 description: ''
-icon: ''
 ---
 
 ## Overview
+
 Billing refers to the process of invoicing customers or clients for goods or services provided. It involves sending a bill or invoice that outlines the charges and payment terms. The purpose of billing is to request payment for the products or services rendered and to ensure timely payment from customers or clients.
 
 ## Objective
-Billing will be implemented using the Stripe and Orb payment platforms. 
-The integration of Stripe and Orb payment processing platforms within the Datum Business Cloud billing module will enhance the platform's capabilities, providing users with secure and flexible payment options.
+
+The billing overview platform is built to provide key insights into accounts recievable for Datum clients. At this time, it is not a holistic invoice processing platform. Instead, it will provide a snapshot of the client's fiscal situation for high level decision makers and investors. The first iteration of the Billing Overview platform will likely take shape as an integration with either the Stripe or Orb payment platform.
 
 ## Context
 
 ## Assumptions
 
+There are three views that should makeup the Billing Overview: the overview itself, a spreadsheet of all invoices, and a two way transaction ledger. It should pull a standardized set of data (detailed below) from the connected invoicing platforms. The searchable spreadsheet should be populated with items that link out to the invoice platform for further details and information.
+
+Key Invoice Data, in suggested order
+- Status
+- Date issued
+- Date due
+- Customer
+- Unit quantity
+- Invoice amount
+- Invoice number
+
+Billing Overview
+- Datum Client profile - easy reference location
+- Fiscal Snapshot - recievables, payables, historical data
+
+Invoice spreadsheet - simple display of all invoice data
+
+Transaction Ledger - simple tracker of all transactions associated with invoice accounts
+
 ## Requirements
-### Payment Processing
-Enable users to accept credit/debit card payments securely through Stripe.
-
-### Subscription Management
-Integrate with Stripe's subscription APIs to handle recurring billing and subscription management.
-
-### Refunds and Disputes
-Provide mechanisms to process refunds and handle payment disputes through the Stripe platform.
-
-### Webhooks
-Implement Stripe webhooks to receive real-time notifications of payment events such as successful charges, failed charges, and subscription cancellations.
 
 ## Design
 
