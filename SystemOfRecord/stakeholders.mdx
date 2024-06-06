@@ -16,6 +16,36 @@ Stakeholder management functionality is focused on maintaining updated informati
 
 
 
+## Structure
+
+There are two design elements to implement the Stakeholder portal: **Profile creation** and **Tabular view**. Design construction details are below.
+
+### Profile creation
+- Losely Inspired by "Vendor Portal Software"
+https://www.scnsoft.com/screenshots/web-portals/vendor-portal-demo/vendor-portal-company-profile.png
+- Fields
+    - Business/Organization name - Textbox | Small field | *Required*
+    - Internal Point of contact - Textbox | Small field
+    - Point of contact from client - Textbox | Small field
+    - Email - Textbox | Small field | *Required*
+    - Phone number - Textbox | Small field
+    - Address - Textbox | Small field
+    - Notes - Textbox | Large field
+    - Agreements - Filestore | Drop/Select
+
+### Tabular View
+- Inspired by Gatekeeper HQ vendor management
+https://www.gatekeeperhq.com/hs-fs/hubfs/4-Hotjar-Vendors%20(1)-1.jpg?width=777&height=503&name=4-Hotjar-Vendors%20(1)-1.jpg
+- Header functional buttons
+    - Create new profile
+    - Filter search
+- Columns
+    - Business/Organization name - Text
+    - Internal point of contact - Text
+    - Contact information - Text
+    - Notes - Link out to profile view *Perhaps combined "Expand Profile" button*
+    - Agreements - Link out to profile view *Perhaps combined into "Expand Profile" button*
+
 ## Assumptions
 
 Stakeholder profiles should be accepting of robust information, with tagging providing additional customization upon basic requirements. 
