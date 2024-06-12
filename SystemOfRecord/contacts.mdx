@@ -18,6 +18,9 @@ The main intent of the contact system is to use the users information (that they
 These opt-in lists mean that the users agree to receive mass emails, newsletters, or other forms of digital communication from the company.
 Dynamic lists are utilizied for the contact system because the size of the lists are modifiable. 
 Additonally, an opt-in feature is implemented so that users are willingly adding themselves to these marketing contact lists.
+
+An employee will utilize this tabular view to export contact groups for certain billing and promotional mailing lists.
+The dynamic functionality of the contact list allows these contacts to be segmented and filtered into different groups making it easier for the employee to manage contacts. 
 ## Context
    
 ## Assumptions
@@ -28,7 +31,7 @@ When a user is added to the contact system and onto these dynamic lists it is im
 - Scalability - The ability to to accommodate growth in data volume and user base over time 
 - CRM - Implement customer relationship management practices and strategies
 
-## Design
+## Design / Structure
 Similar to the docs.lemonsqueezy.com email section in their documentation. 
 
 Sidebar on the side with:
@@ -39,12 +42,23 @@ Sidebar on the side with:
     - (optional) Profile Depth Indicator - Beyond the required fields, the depth of information that is available for this customer 
     - (optional) Segment Indicator - Provide a field that shows which segment the contact is a part of 
 - Segments: filter subscribers into different groups. Creates dynamic lists of subscribers
-- Email editor/Sending emails: allows companies to create and send out mass emails
+- Email editor/Sending emails: allows companies to create and send out mass emails. Integrate with SendGrid to seamlessly create and send emails
 - Sign up forms: opt in forms to add contacts to the emails lists 
 ## Requirements
+### Mutability
 
+Contract profiles should be easily accessible, as data is subject to moderately frequent change. 
+This ability should be gated behind permissions, and all changes should be reflected in the audit log for each profile object.
 
+### Searchable and Filterable
 
+Both simple and advanced queries should be available to clients.
+
+### Scalability 
+The contacts system is able to accomadate to contacts being added as the platform grows. 
 ## Metrics
+Organization and management of contacts can be beneficial to employees that oversee these activities (creating and sending emails)
 
 ## Scope
+Employees 
+
