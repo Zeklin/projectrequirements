@@ -16,22 +16,34 @@ These contacts can consist of prospective customers or businesses, current custo
 The contact system should manage and organize the marketing contacts which can be segmented based on various factors such as demographic, behavior, engagement level, etc. 
 The main intent of the contact system is to use the users information (that they are willingly providing) in order to add them to the company's opt-in list. 
 These opt-in lists mean that the users agree to receive mass emails, newsletters, or other forms of digital communication from the company.
-Dynamic lists are utlizied for the contact system because the size of the lists are modifiable. 
+Dynamic lists are utilizied for the contact system because the size of the lists are modifiable. 
 Additonally, an opt-in feature is implemented so that users are willingly adding themselves to these marketing contact lists.
 ## Context
    
 ## Assumptions
 When a user is added to the contact system and onto these dynamic lists it is important that enough information is provided about the user. Specifically, the following fields are critical to the contact system:
-- Actor - The username, uuid, API token name of the account taking the action.
+- Subscriber - The contact information of the subscriber 
 - Group - The group (aka organization, team, account) that the actor is a member of (needed to show admins the full history of their group).
 - Information - Information about the user that should be shown in the contact list
 - Scalability - The ability to to accommodate growth in data volume and user base over time 
 - CRM - Implement customer relationship management practices and strategies
 
+## Design
+Similar to the docs.lemonsqueezy.com email section in their documentation. 
 
+Sidebar on the side with:
+- Subscribers: list with subscriber information (signed up users, prospective customers, etc.)
+    - Name - Business/Organization name, point of contact at organization, point of contact from client (text)
+    - Contact information - Email, phone number, address (text)
+    - (optional) Notes - Textbox for additional personalized information (text)
+    - (optional) Profile Depth Indicator - Beyond the required fields, the depth of information that is available for this customer 
+    - (optional) Segment Indicator - Provide a field that shows which segment the contact is a part of 
+- Segments: filter subscribers into different groups. Creates dynamic lists of subscribers
+- Email editor/Sending emails: allows companies to create and send out mass emails
+- Sign up forms: opt in forms to add contacts to the emails lists 
 ## Requirements
 
-## Design
+
 
 ## Metrics
 
